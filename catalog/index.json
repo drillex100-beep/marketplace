@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "updated": "2026-11-07T02:14:37Z",
+  "adapters": [
+    {
+      "id": "cardlink",
+      "category": "payments",
+      "name": {
+        "en": "Cardlink",
+        "ru": "Cardlink"
+      },
+      "description": {
+        "en": "Bank cards and SBP through Cardlink",
+        "ru": "Карты и СБП через Cardlink"
+      },
+      "version": "1.0.0",
+      "protocol": 1,
+      "image": "ghcr.io/drillex100-beep/adapter-cardlink",
+      "digest": "sha256:b4ca33232ddfd18db214d9bce25a995a2505276f7dd24c06323899d7bdf33382",
+      "min_panel": "0.4.3",
+      "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/cardlink"
+    },
+    {
+      "id": "cryptobot",
+      "category": "payments",
+      "name": {
+        "en": "CryptoBot",
+        "ru": "CryptoBot"
+      },
+      "description": {
+        "en": "Cryptocurrency via @CryptoBot in Telegram",
+        "ru": "Криптовалюта через @CryptoBot в Telegram"
+      },
+      "version": "1.0.4",
+      "protocol": 1,
+      "image": "ghcr.io/drillex100-beep/adapter-cryptobot",
+      "digest": "sha256:7701d91717b421d702c96950d4e792832f2fbafec9c404f0f2a66eb0de4a9ed2",
+      "min_panel": "0.4.3",
+      "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/cryptobot"
+    },
+    {
+      "id": "platega",
+      "category": "payments",
+      "name": {
+        "en": "Platega",
+        "ru": "Platega"
+      },
+      "description": {
+        "en": "SBP, cards, Sberpay and crypto through Platega",
+        "ru": "СБП, карты, Sberpay, криптовалюта через Platega"
+      },
+      "version": "1.0.5",
+      "protocol": 1,
+      "image": "ghcr.io/drillex100-beep/adapter-platega",
+      "digest": "sha256:645fc1cc36c326c65af81f0e64e408b0890872a3515a3be63f668da03ed8ca04",
+      "min_panel": "0.4.3",
+      "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/platega"
+    },
+    {
+      "id": "rollypay",
+      "category": "payments",
+      "name": {
+        "en": "RollyPay",
+        "ru": "RollyPay"
+      },
+      "description": {
+        "en": "SBP, cards and crypto through RollyPay",
+        "ru": "СБП, карты и криптовалюта через RollyPay"
+      },
+      "version": "1.0.5",
+      "protocol": 1,
+      "image": "ghcr.io/drillex100-beep/adapter-rollypay",
+      "digest": "sha256:0dc3d8a39c67a4f8037b5c844712acb8f68be890d78c73711b81fbef23ca8737",
+      "min_panel": "0.4.3",
+      "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/rollypay"
+    },
+    {
+      "id": "status-page",
+      "category": "tools",
+      "name": {
+        "en": "Status page",
+        "ru": "Статус-страница"
+      },
+      "description": {
+        "en": "A public page of the servers' and protocols' availability: what works, what does not and why",
+        "ru": "Публичная страница доступности серверов и протоколов: что работает, что нет и почему"
+      },
+      "version": "0.5.2.2",
+      "protocol": 2,
+      "kind": "ui",
+      "mode": "http",
+      "permissions": [
+        "nodes:read",
+        "inbounds:read",
+        "kv",
+        "ui:public"
+      ],
+      "resources": {
+        "mem_mb": 64
+      },
+      "image": "ghcr.io/drillex100-beep/tool-status-page",
+      "digest": "sha256:e7047945a95618c332ee2e2e4f7000621f57d0a23c53a76b3fd1444eebc13fa9",
+      "min_panel": "0.5.2.2",
+      "homepage": "https://github.com/drillex100-beep/scilla"
+    },
+    {
+      "id": "telegram",
+      "category": "tools",
+      "name": {
+        "en": "Telegram bot",
+        "ru": "Telegram-бот"
+      },
+      "description": {
+        "en": "The official Scilla bot: subscription menu, purchases, devices, notices",
+        "ru": "Официальный бот Scilla: меню подписки, покупка, устройства, уведомления"
+      },
+      "version": "0.5.2.1",
+      "protocol": 2,
+      "kind": "bot",
+      "mode": "client",
+      "permissions": [
+        "bot",
+        "users:read",
+        "users:write",
+        "billing:invoice",
+        "events",
+        "kv"
+      ],
+      "resources": {
+        "mem_mb": 128
+      },
+      "image": "ghcr.io/drillex100-beep/tool-telegram",
+      "digest": "sha256:244e28fac5972dfdb3b04f458bb70eae25c05e1b2ce55ed66c040cb78cb7f27e",
+      "min_panel": "0.5.1.0",
+      "homepage": "https://github.com/drillex100-beep/scilla"
+    },
+    {
+      "id": "yookassa",
+      "category": "payments",
+      "name": {
+        "en": "YooKassa",
+        "ru": "ЮKassa"
+      },
+      "description": {
+        "en": "Bank cards and SBP",
+        "ru": "Банковские карты и СБП"
+      },
+      "version": "1.0.4",
+      "protocol": 1,
+      "image": "ghcr.io/drillex100-beep/adapter-yookassa",
+      "digest": "sha256:daf75c1a5f4b48e42efd566cde7faa809b0f84b6a5b2ff26cdaa69c833ccbe9e",
+      "min_panel": "0.4.3",
+      "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/yookassa"
+    }
+  ]
+}
