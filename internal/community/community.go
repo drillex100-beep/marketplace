@@ -448,7 +448,7 @@ const PublicKey = "BKCw8Uf/qo3xSrYL+jwWyEThn/PXxHh0FiJvLDowmdc="
 
 // Context is what the index's signature covers before the file's bytes (mikan's
 // internal/release.CommunityContext).
-const Context = "mikan community v1\n"
+const Context = "scilla community v1\n"
 
 // Sign is the base64 Ed25519 signature of the file, the contents of index.json.sig: the release
 // key's, for the panels before 0.5.1.1.

@@ -36,7 +36,7 @@ const LegacyKey = "Z3wSIPBSaJxh5CsGO8eINI0aM0kyrQ46EcJSNeH85W8="
 // Context is what a catalog's signature covers before the file's bytes (mikan's
 // internal/release.CatalogContext): a signature made for another kind of document never
 // passes for the catalog.
-const Context = "mikan catalog v1\n"
+const Context = "scilla catalog v1\n"
 
 // SigSuffix names the signature in a context next to its file (index.json.sig2).
 const SigSuffix = ".sig2"

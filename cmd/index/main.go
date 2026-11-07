@@ -210,7 +210,7 @@ func makeReleasePlan(root string, ms []catalog.Manifest, prev catalog.Index, pat
 			changed[parts[1]] = true
 		case file == "go.mod" || file == "go.sum" || strings.HasPrefix(file, "internal/adapter/"):
 			shared = true
-		case strings.HasPrefix(file, "internal/catalog/") || strings.HasPrefix(file, "internal/community/") || strings.HasPrefix(file, ".github/") || strings.HasPrefix(file, "cmd/index/") || strings.HasPrefix(file, "cmd/community/") || file == "LICENSE" || file == ".gitignore":
+		case strings.HasPrefix(file, "internal/catalog/") || strings.HasPrefix(file, "internal/community/") || strings.HasPrefix(file, "catalog/") || strings.HasPrefix(file, ".github/") || strings.HasPrefix(file, "cmd/index/") || strings.HasPrefix(file, "cmd/community/") || file == "LICENSE" || file == ".gitignore":
 		default:
 			shared = true // unknown image input: rebuild conservatively
 		}
