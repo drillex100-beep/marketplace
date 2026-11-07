@@ -5,7 +5,7 @@
   "description": {"ru": "Криптовалюта через @CryptoBot в Telegram", "en": "Cryptocurrency via @CryptoBot in Telegram"},
   "version": "1.0.4",
   "protocol": 1,
-  "image": "ghcr.io/getmikan/adapter-cryptobot",
+  "image": "ghcr.io/drillex100-beep/adapter-cryptobot",
   "min_panel": "0.4.3",
-  "homepage": "https://github.com/getmikan/marketplace/tree/main/payments/cryptobot"
+  "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/cryptobot"
 }

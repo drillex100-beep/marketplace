@@ -5,7 +5,7 @@
   "description": {"ru": "Банковские карты и СБП", "en": "Bank cards and SBP"},
   "version": "1.0.4",
   "protocol": 1,
-  "image": "ghcr.io/getmikan/adapter-yookassa",
+  "image": "ghcr.io/drillex100-beep/adapter-yookassa",
   "min_panel": "0.4.3",
-  "homepage": "https://github.com/getmikan/marketplace/tree/main/payments/yookassa"
+  "homepage": "https://github.com/drillex100-beep/marketplace/tree/main/payments/yookassa"
 }

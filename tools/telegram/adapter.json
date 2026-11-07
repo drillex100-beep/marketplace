@@ -9,7 +9,7 @@
   "mode": "client",
   "permissions": ["bot", "users:read", "users:write", "billing:invoice", "events", "kv"],
   "resources": {"mem_mb": 128},
-  "image": "ghcr.io/getmikan/tool-telegram",
+  "image": "ghcr.io/drillex100-beep/tool-telegram",
   "min_panel": "0.5.1.0-rc.11",
-  "homepage": "https://github.com/Miroshka000/mikan"
+  "homepage": "https://github.com/drillex100-beep/scilla"
 }

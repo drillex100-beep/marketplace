@@ -70,7 +70,7 @@ var Kinds = []string{"bot", "ui", "generic"}
 var Modes = []string{"http", "client"}
 
 // Permissions a protocol 2 addon may ask for; the admin approves them at install.
-var Permissions = []string{"bot", "users:read", "users:write", "billing:invoice", "events", "kv", "ui"}
+var Permissions = []string{"bot", "users:read", "users:write", "users:all", "users:grant", "billing:invoice", "events", "kv", "ui", "nodes:read", "inbounds:read", "inbounds:write", "ui:public"}
 
 // MinMemMB and MaxMemMB bound the memory an addon may ask for; 0 is the host's default.
 const (
@@ -79,10 +79,10 @@ const (
 )
 
 // ImagePrefix is where the payment adapters' images are published: ImagePrefix + id.
-const ImagePrefix = "ghcr.io/getmikan/adapter-"
+const ImagePrefix = "ghcr.io/drillex100-beep/adapter-"
 
 // ToolImagePrefix is where the tools' images are published: ToolImagePrefix + id.
-const ToolImagePrefix = "ghcr.io/getmikan/tool-"
+const ToolImagePrefix = "ghcr.io/drillex100-beep/tool-"
 
 // ImageFor is the image an adapter of the category is published as.
 func ImageFor(category, id string) string {

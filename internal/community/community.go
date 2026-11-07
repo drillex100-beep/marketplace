@@ -50,7 +50,7 @@ const MaxEntries = 16
 // than the catalog's, whose own tools need less. Wide are the ones that reach every subscriber:
 // a snapshot that newly asks for one waits for a review.
 var (
-	Permissions = []string{"bot", "users:read", "users:write", "users:all", "users:grant", "billing:invoice", "events", "kv", "ui"}
+	Permissions = []string{"bot", "users:read", "users:write", "users:all", "users:grant", "billing:invoice", "events", "kv", "ui", "nodes:read", "inbounds:read", "inbounds:write", "ui:public"}
 	Wide        = []string{"users:all", "users:grant"}
 )
 
