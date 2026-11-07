@@ -219,6 +219,9 @@ func buildPage(lang string, st *state, nodes []panelNode, inbounds []panelInboun
 		data.Checked = st.LastPoll.Local().Format("15:04:05")
 	}
 	switch {
+	case len(inbounds) == 0:
+		// The panel has not answered a poll yet: no rows, no banner of health.
+		data.Banner, data.BannerCls = pick(lang, "Нет данных", "No data"), "b-mut"
 	case active == 0 && offs > 0:
 		data.Banner, data.BannerCls = pick(lang, "Все протоколы выключены", "Every protocol is off"), "b-mut"
 	case errs == 0 && unknowns > 0 && oks == 0:
@@ -247,11 +250,24 @@ func pick(lang, ru, en string) string {
 func explain(lang string, errs, oks, unknowns, active, oneErr int, inbounds []panelInbound) string {
 	ru := lang == "ru"
 	switch {
-	case errs == 0 && oks > 0:
+	case active == 0:
+		// Nothing enabled or nothing known: the banner says which.
+		return ""
+	case errs == 0 && unknowns == active:
+		if ru {
+			return "Панель пока не может проверить серверы: данных об их состоянии нет."
+		}
+		return "The panel cannot check the servers yet: there is no data about their state."
+	case errs == 0 && oks == active:
 		if ru {
 			return "Все протоколы отвечают. Если у вас не работает VPN — проблема на вашем устройстве или у провайдера."
 		}
 		return "Every protocol answers. If your VPN does not work — the problem is on your device or with your provider."
+	case errs == 0 && oks > 0:
+		if ru {
+			return "Проверенные протоколы отвечают, по части нет данных. Если у вас не работает VPN — попробуйте другой сервер или протокол."
+		}
+		return "The checked protocols answer, some have no data. If your VPN does not work — try another server or protocol."
 	case errs == active:
 		if ru {
 			return "Недоступны все протоколы: проблема на стороне панели или сети."
