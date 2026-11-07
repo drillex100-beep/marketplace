@@ -1,15 +1,30 @@
 {
   "id": "telegram",
   "category": "tools",
-  "name": {"ru": "Telegram-бот", "en": "Telegram bot"},
-  "description": {"ru": "Официальный бот mikan: меню подписки, покупка, устройства, уведомления", "en": "The official mikan bot: subscription menu, purchases, devices, notices"},
-  "version": "0.5.1.0-rc.11",
+  "name": {
+    "ru": "Telegram-бот",
+    "en": "Telegram bot"
+  },
+  "description": {
+    "ru": "Официальный бот Scilla: меню подписки, покупка, устройства, уведомления",
+    "en": "The official Scilla bot: subscription menu, purchases, devices, notices"
+  },
+  "version": "0.5.2.1",
   "protocol": 2,
   "kind": "bot",
   "mode": "client",
-  "permissions": ["bot", "users:read", "users:write", "billing:invoice", "events", "kv"],
-  "resources": {"mem_mb": 128},
+  "permissions": [
+    "bot",
+    "users:read",
+    "users:write",
+    "billing:invoice",
+    "events",
+    "kv"
+  ],
+  "resources": {
+    "mem_mb": 128
+  },
   "image": "ghcr.io/drillex100-beep/tool-telegram",
-  "min_panel": "0.5.1.0-rc.11",
+  "min_panel": "0.5.1.0",
   "homepage": "https://github.com/drillex100-beep/scilla"
 }
