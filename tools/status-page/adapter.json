@@ -1,0 +1,15 @@
+{
+  "id": "status-page",
+  "category": "tools",
+  "name": {"ru": "Статус-страница", "en": "Status page"},
+  "description": {"ru": "Публичная страница доступности серверов и протоколов: что работает, что нет и почему", "en": "A public page of the servers' and protocols' availability: what works, what does not and why"},
+  "version": "0.5.2.2",
+  "protocol": 2,
+  "kind": "ui",
+  "mode": "http",
+  "permissions": ["nodes:read", "inbounds:read", "kv", "ui:public"],
+  "resources": {"mem_mb": 64},
+  "image": "ghcr.io/drillex100-beep/tool-status-page",
+  "min_panel": "0.5.2.2",
+  "homepage": "https://github.com/drillex100-beep/scilla"
+}
