@@ -27,7 +27,7 @@ import (
 
 // PublicKey is the public half of the catalog's key (raw Ed25519, base64): the same key as
 // mikan's internal/release.CatalogKey, which the panel and the host verify the catalog with.
-const PublicKey = "Z4QfL07dI/IRReSe6Gr76UcxxPoy4i2GiClBv8RcNuo="
+const PublicKey = "bTylRn1kzD3tpQpXos7wRRryVaJ/wLQoFAdUywwtR/k="
 
 // LegacyKey is the public half of the mikan release key, which signed the catalog for the
 // panels before 0.5.1.1 (index.json.sig).
