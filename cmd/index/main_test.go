@@ -440,7 +440,7 @@ func TestTelegramEntry(t *testing.T) {
 		case "telegram":
 			if e.Protocol != 2 || e.Kind != "bot" || e.Mode != "client" || e.Resources.MemMB != 128 ||
 				strings.Join(e.Permissions, ",") != "bot,users:read,users:write,billing:invoice,events,kv" ||
-				e.Image != "ghcr.io/drillex100-beep/tool-telegram" || e.MinPanel != e.Version {
+				e.Image != "ghcr.io/drillex100-beep/tool-telegram" || e.MinPanel != "0.5.1.0" {
 				t.Errorf("telegram: %+v", e)
 			}
 		case "status-page":
@@ -487,9 +487,9 @@ func TestOwnInputsOnly(t *testing.T) {
 	}
 }
 
-// The telegram tool builds mikan's source: the shared code of this repository is no input
+// The telegram tool builds scilla's source: the shared code of this repository is no input
 // of its image, so a change there does not ask for a new telegram version (which must be a
-// mikan release).
+// scilla release).
 func TestReleasePlanSelfContainedTool(t *testing.T) {
 	ms, prev := realIndex(t)
 	bumped := slices.Clone(ms)
@@ -510,11 +510,11 @@ func TestReleasePlanSelfContainedTool(t *testing.T) {
 	}
 	for i := range ms {
 		if ms[i].ID == "telegram" {
-			ms[i].Version = "0.5.1.0"
+			ms[i].Version = "0.5.2.2"
 		}
 	}
 	p, err = makeReleasePlan("../..", ms, prev, []string{"tools/telegram/adapter.json"})
-	if err != nil || len(p.Build) != 1 || p.Build[0] != (listed{ID: "telegram", Version: "0.5.1.0", Dir: "tools/telegram", Image: "ghcr.io/drillex100-beep/tool-telegram"}) {
-		t.Fatalf("a new mikan release: %+v, %v", p, err)
+	if err != nil || len(p.Build) != 1 || p.Build[0] != (listed{ID: "telegram", Version: "0.5.2.2", Dir: "tools/telegram", Image: "ghcr.io/drillex100-beep/tool-telegram"}) {
+		t.Fatalf("a new scilla release: %+v, %v", p, err)
 	}
 }
