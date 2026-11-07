@@ -1,6 +1,6 @@
 # mikan marketplace
 
-Addons for the [mikan](https://github.com/Miroshka000/mikan) VPN panel, and the signed
+Addons for the [mikan](https://github.com/drillex100-beep/scilla) VPN panel, and the signed
 catalog the panel installs them from. They come in packages:
 
 - [`payments/`](payments): payment methods. Each is a small stateless HTTP service that

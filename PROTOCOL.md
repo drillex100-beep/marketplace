@@ -1,6 +1,6 @@
 # mikan payment adapter protocol, version 1
 
-A payment adapter connects the [mikan](https://github.com/Miroshka000/mikan) panel to one
+A payment adapter connects the [mikan](https://github.com/drillex100-beep/scilla) panel to one
 payment provider. It is a small stateless HTTP service in a container on the same host as
 the panel. It knows the provider's API and nothing about users or tariffs.
 

@@ -5,7 +5,7 @@ Protocol: [PROTOCOL-v2.md](../../PROTOCOL-v2.md), kind `bot`, mode `client`. Ima
 `ghcr.io/getmikan/tool-telegram`.
 
 The code is not here: the image builds `cmd/mikan-telegram` of
-[mikan](https://github.com/Miroshka000/mikan) at the tag `v<version>`, where `<version>` is
+[mikan](https://github.com/drillex100-beep/scilla) at the tag `v<version>`, where `<version>` is
 this tool's version in [adapter.json](adapter.json) (CI passes it as the `VERSION` build
 argument). So the tool's version is always the mikan release it comes from, and a new
 release of the bot is a new version here.

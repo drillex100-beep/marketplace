@@ -1,7 +1,7 @@
 # mikan addon protocol, version 2
 
 Every addon that is not a payment method speaks protocol 2: a Telegram bot, admin pages,
-anything else that works with the [mikan](https://github.com/Miroshka000/mikan) panel. Payment
+anything else that works with the [mikan](https://github.com/drillex100-beep/scilla) panel. Payment
 adapters keep [PROTOCOL.md](PROTOCOL.md) (protocol 1) unchanged. Protocol 2 needs panel and
 host 0.5.1.0 or later.
 
@@ -31,7 +31,7 @@ An addon of this repository lives in `tools/<id>/` and is published as
   "resources": {"mem_mb": 128},
   "image": "ghcr.io/getmikan/tool-telegram",
   "min_panel": "0.5.1.0-rc.6",
-  "homepage": "https://github.com/Miroshka000/mikan"
+  "homepage": "https://github.com/drillex100-beep/scilla"
 }
 ```
 
